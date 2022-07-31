@@ -13,3 +13,4 @@ git
 neovim
 vim
 htop
+libreoffice-fresh

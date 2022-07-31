@@ -3,6 +3,8 @@ dracula-gtk-theme
 nvhpc
 onedriver
 spotify
+slack-desktop
+zoom
 nerd-fonts-source-code-pro
 rofi-greenclip
 autotiling
