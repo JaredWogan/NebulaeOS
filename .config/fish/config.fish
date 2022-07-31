@@ -6,7 +6,11 @@ set -g theme_date_timezone America/Toronto
 # First line removes the path; second line sets it.  Without the first line,
 # your path gets massive and fish becomes very slow.
 set -e fish_user_paths
-set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
+set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths $HOME/anaconda3/bin
+
+# Set default editors
+export VISUAL=code
+export EDITOR="$VISUAL"
 
 # Change vim and vi to neovim
 alias vi='nvim'
@@ -55,3 +59,9 @@ alias ytv-best="yt-dlp -f bestvideo+bestaudio "
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /home/qn/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
