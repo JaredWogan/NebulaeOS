@@ -8,3 +8,5 @@ zoom
 nerd-fonts-source-code-pro
 rofi-greenclip
 autotiling
+neovim-plug
+ctags
