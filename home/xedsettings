@@ -1,0 +1,26 @@
+[plugins]
+active-plugins=['modelines', 'filebrowser', 'spell', 'textsize', 'joinlines', 'docinfo', 'sort', 'bracketcompletion', 'open-uri-context-menu', 'time']
+
+[plugins/filebrowser/on-load]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/qn/Documents/DOTFILES'
+
+[preferences/editor]
+bracket-matching=true
+display-line-numbers=true
+editor-font='Source Code Pro Medium 12'
+prefer-dark-theme=true
+scheme='dracula'
+use-default-font=false
+wrap-mode='none'
+
+[preferences/ui]
+statusbar-visible=true
+
+[state/window]
+bottom-panel-size=140
+side-panel-active-page=827629879
+side-panel-size=200
+size=(632, 921)
+state=128

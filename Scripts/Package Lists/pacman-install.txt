@@ -1,0 +1,15 @@
+chromium
+code
+alacritty
+fish
+yt-dlp
+discord
+gnuplot
+exa
+tar
+unzip
+unrar
+git
+neovim
+vim
+htop

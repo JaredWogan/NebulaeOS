@@ -1,0 +1,8 @@
+dracula-icons-git
+dracula-gtk-theme
+nvhpc
+onedriver
+spotify
+nerd-fonts-source-code-pro
+rofi-greenclip
+autotiling
