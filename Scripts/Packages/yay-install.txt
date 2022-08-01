@@ -1,6 +1,6 @@
 dracula-icons-git
 dracula-gtk-theme
-nvhpc
+#nvhpc
 onedriver
 spotify
 slack-desktop

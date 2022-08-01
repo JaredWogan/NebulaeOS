@@ -41,12 +41,12 @@ func_install_yay() {
 }
 
 # Install packages from standard repositories
-cat "./Package Lists/pacman-install.txt" | while read pkg || [[ -n $pkg ]]; do
+cat "./Packages/pacman-install.txt" | while read pkg || [[ -n $pkg ]]; do
    func_install_pacman $pkg
 done
 
 # Install packages from Arch User Repository
-cat "./Package Lists/yay-install.txt" | while read pkg || [[ -n $pkg ]]; do
+cat "./Packages/yay-install.txt" | while read pkg || [[ -n $pkg ]]; do
    func_install_yay $pkg
 done
 
@@ -95,10 +95,37 @@ if [ ! -d ~/anaconda3 ]; then
     conda config --set channel_priority strict
     conda create -c conda-forge --name ROOT root
 else
-    tput setaf 3
+    tput setaf 2
     echo
 	echo "###############################################################################"
 	echo "##################  The package Anaconda is already installed"
+	echo "###############################################################################"
+	echo
+    tput sgr0
+fi
+
+# Install OpenMPI
+if [ ! -d /usr/bin/mpicc ]; then
+    tput setaf 3
+    echo
+	echo "###############################################################################"
+	echo "##################  Installing package OpenMPI"
+	echo "###############################################################################"
+	echo
+    tput sgr0
+    curl https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.4.tar.gz > openmpi-4.1.4.tar.gz
+	gunzip -c openmpi-4.1.4.tar.gz | tar xf -
+	rm -rf openmpi-4.1.4.tar.gz
+	cd openmpi-4.1.4
+	sh ./configure --prefix=/usr/local/
+	sudo make all install
+	cd ..
+	sudo rm -rf ./openmpi-4.1.4
+else
+    tput setaf 2
+    echo
+	echo "###############################################################################"
+	echo "##################  The package OpenMPI is already installed"
 	echo "###############################################################################"
 	echo
     tput sgr0
