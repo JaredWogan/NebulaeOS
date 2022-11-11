@@ -5,7 +5,7 @@ onedriver
 spotify
 slack-desktop
 zoom
-nerd-fonts-source-code-pro
+nerd-fonts-complete
 rofi-greenclip
 autotiling
 neovim-plug
